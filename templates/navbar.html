@@ -1,0 +1,69 @@
+<header id="navigation" class="navbar navbar-inverse">
+
+        <div class="container">
+        <div class="pull-left">
+        <a class="navbar-brand" href="/">
+            <h1 id="logo">
+                <img class="navbarLogo"src="/assets/img/navbarlogo.png" alt="Fidelio" />
+            </h1>
+        </a>
+         </div>
+
+    <div class="navbar-header">
+        <!-- responsive nav button -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Turn on/off the navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <!-- /responsive nav button -->
+
+        <!-- logo -->
+
+        <!-- /logo -->
+
+    </div>
+    <!-- main nav -->
+
+    <nav class="collapse navbar-collapse navbar-left" role="Navigation">
+
+        <ul id="nav" class="nav navbar-nav">
+            <li class="current"><a href="/">Home</a></li>
+            <li><a href="/explore">Explore</a></li>
+
+        </ul>
+    </nav>
+
+     <nav class="collapse navbar-collapse navbar-right" role="Navigation">
+
+        <ul id="nav" class="nav navbar-nav">
+            <form action="" class="search-form pull-left" style="margin-top:8px;">
+                <div class="form-group has-feedback">
+
+                    <label for="Search & Destroy" class="sr-only"></label>
+                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                    <input type="text"   class="form-control" name="search" id="search" placeholder="Search & Destroy">
+
+                </div>
+            </form>
+            <li>
+             <a href="#" class="btn btn-info btn-lg" style="margin-left:5px;margin-right:5px;margin-top:-25px;">
+             <label class="btn btn-default btn-file">
+                 <form id="uploadNavBar" method="post" enctype="multipart/form-data">
+                     {% csrf_token %}
+                     <span class="glyphicon glyphicon-cloud-upload"></span>
+                 <input name="navbar_upload" type="file"  onchange="this.form.submit()" style="display: none;">
+                 </form>
+            </label>
+            </a>
+            </li>
+            <li></li>
+        </ul>
+
+
+    </nav>
+</div>
+    <!-- /main nav -->
+
+</header>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="Fidelio">
+        
+        <meta name="author" content="Fidelio | Visualizing your records">
+		
+        <title>Fidelio | Upload Your Sound</title>
+		
+		<!-- Mobile Specific Meta
+		================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+		
+		<!-- CSS
+		================================================== -->
+		<!-- Fontawesome Icon font -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        	<!-- Fontawesome Icon font -->
+        <link rel="stylesheet" href="css/font-awesome.css">
+		<!-- bootstrap.min css -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- Animate.css -->
+        <link rel="stylesheet" href="css/animate.css">
+		<!-- Grid Component css -->
+        <link rel="stylesheet" href="css/component.css">
+		<!-- Slit Slider css -->
+        <link rel="stylesheet" href="css/slit-slider.css">
+		<!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css/main.css">
+		<!-- Media Queries -->
+        <link rel="stylesheet" href="css/media-queries.css">
+        <!-- Search Box Bootstrap -->
+        <link rel="stylesheet" href="css/sBox.css">
+          <!-- Record Background Styles -->
+        <link rel="stylesheet" href="css/record.css">
+          <!-- Record Thumbnails Slider-->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+              <!-- Home Random Image-->
+        <style>
+        #home .bg-img-1 {
+	           background-image: url(./img/slides/yolo.gif);
+        }
+         .bg-img-1 {
+	           background-image: url(./img/slides/yolo.gif);
+        }    
+        </style>
+        
+		<!--
+		Google Font
+		=========================== -->                    
+		
+		<!-- Oswald / Title Font -->
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+		<!-- Ubuntu / Body Font -->
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300' rel='stylesheet' type='text/css'>
+		
+		<!-- Modernizer Script for old Browsers -->		
+        <script src="scriptler/modernizr-2.6.2.min.js"></script>
+
+
+	
+    </head>
+	
+    <body id="body">
+	    <!--
+	    Yüklenme Ekranı Başlangıç
+	    ==================================== -->
+		<div id="loading-mask">
+			<div class="loading-img">
+				<img alt="eNdaPreLoadeR" src="img/preloader.gif" width = "125" height="125" />
+			</div>
+		</div>
+        <!--
+        Yükleme Ekranı Bitiş
+        ==================================== -->
+		  <!-- 
+        Mobil Görünüm Üst Menü Navigasyon
+        ==================================== -->
+        <header id="navigation" class="navbar navbar-inverse">
+                       
+                    <div class="container">
+                    <div class="pull-left">
+                    <a class="navbar-brand" href="#body">
+                        <h1 id="logo">
+							<img class="navbarLogo"src="img/navbarlogo.png" alt="Fidelio" />
+						</h1>
+					</a>
+                     </div>
+                  
+                <div class="navbar-header">
+                    <!-- responsive nav button -->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Navigasyonu Aç/Kapa</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					<!-- /responsive nav button -->
+					
+					<!-- logo -->
+       
+					<!-- /logo -->
+               
+                </div>    
+				<!-- main nav -->
+              
+                <nav class="collapse navbar-collapse navbar-left" role="Navigation">
+                    
+                    <ul id="nav" class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">Explore</a></li>
+                     
+                        
+                       
+                        
+                    </ul>
+                </nav>
+                        
+                 <nav class="collapse navbar-collapse navbar-right" role="Navigation">
+                    
+                    <ul id="nav" class="nav navbar-nav">
+                        <form action="" class="search-form pull-left" style="margin-top:8px;">
+                <div class="form-group has-feedback">
+            		<label for="Search & Destroy" class="sr-only"></label>
+                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            		<input type="text"  onchange="this.form.submit()" class="form-control" name="search" id="search" placeholder="Search & Destroy">
+              		
+            	</div>
+            </form>
+                        <li>
+                         <a href="#" class="btn btn-info btn-lg" style="margin-left:5px;margin-right:5px;margin-top:-25px;">
+                         <label class="btn btn-default btn-file">  <span class="glyphicon glyphicon-cloud-upload"></span>
+                             <input type="file"  onchange="this.form.submit()" style="display: none;">
+                        </label>
+                        </a>
+                        </li>
+                        <li></li>
+                    </ul>
+                     
+                     
+                </nav>
+            </div>
+				<!-- /main nav -->
+				
+            
+        </header>
+        <!--
+        Mobil Görünüm Üst Nav-bar Bitiş
+        ==================================== -->
+		<section id=" home" class="">
+			<div class="bg-img bg-img-1 og-grid">
+                                <div class="record">
+                                
+                                <div class="col-lg-4">
+                                <!--Açıklama Adı  büyük yer-->    
+                                <h2 data-wow-duration="300ms"  data-wow-delay="300ms" class="heading animated fadeInRight float-left ">Record title: </h2> 
+                                <h3 style="font-weight:lighter;font-style:italic;">Epikur</h3> <!-- Açıklama açıklaması küççük yer -->
+                                         <!--Açıklama Adı  büyük yer-->    
+                                <h2 data-wow-duration="300ms"  data-wow-delay="300ms" class="heading animated fadeInRight float-left ">Record NAME: </h2> 
+                                <h3 style="font-weight:lighter;font-style:italic;">Epikur</h3> <!-- Açıklama açıklaması küççük yer -->         <!--Açıklama Adı  büyük yer-->    
+                                <h2 data-wow-duration="300ms"  data-wow-delay="300ms" class="heading animated fadeInRight float-left ">Record title: </h2> 
+                                <h3 style="font-weight:lighter;font-style:italic;">Epikur</h3> <!-- Açıklama açıklaması küççük yer -->
+                                    
+                                    
+                                </div> <!-- COL-LG-2 BİTİŞ -->
+                                    <div class="col-lg-4">
+                                <!--Açıklama Adı  büyük yer-->    
+                                <h2 data-wow-duration="300ms"  data-wow-delay="300ms" class="heading animated fadeInRight float-left ">Record GENRE: </h2> 
+                                <h3 style="font-weight:lighter;font-style:italic;">Epikur</h3> <!-- Açıklama açıklaması küççük yer -->
+                                         <!--Açıklama Adı  büyük yer-->    
+                                <h2 data-wow-duration="300ms"  data-wow-delay="300ms" class="heading animated fadeInRight float-left ">Record Producer: </h2> 
+                                <h3 style="font-weight:lighter;font-style:italic;">Epikur</h3> <!-- Açıklama açıklaması küççük yer -->         <!--Açıklama Adı  büyük yer-->    
+                                <h2 data-wow-duration="300ms"  data-wow-delay="300ms" class="heading animated fadeInRight float-left ">Record title: </h2> 
+                                <h3 style="font-weight:lighter;font-style:italic;">Epikur</h3> <!-- Açıklama açıklaması küççük yer -->
+                                    
+                                    
+                                </div> <!-- COL-LG-2 BİTİŞ -->  
+                                    <div class="col-lg-4">
+                                <!--Açıklama Adı  büyük yer-->    
+                                <h2 data-wow-duration="300ms"  data-wow-delay="300ms" class="heading animated fadeInRight float-left ">Record GENRE: </h2> 
+                                <h3 style="font-weight:lighter;font-style:italic;">Epikur</h3> <!-- Açıklama açıklaması küççük yer -->
+                                         <!--Açıklama Adı  büyük yer-->    
+                                <h2 data-wow-duration="300ms"  data-wow-delay="300ms" class="heading animated fadeInRight float-left ">Record Producer: </h2> 
+                                <h3 style="font-weight:lighter;font-style:italic;">Epikur</h3> <!-- Açıklama açıklaması küççük yer -->         <!--Açıklama Adı  büyük yer-->    
+                                <h2 data-wow-duration="300ms"  data-wow-delay="300ms" class="heading animated fadeInRight float-left ">Record title: </h2> 
+                                <h3 style="font-weight:lighter;font-style:italic;">Epikur</h3> <!-- Açıklama açıklaması küççük yer -->          
+                                </div> <!-- COL-LG-2 BİTİŞ -->
+                                            <!-- Resim olarak indir.. -->
+                                <label class="btn btn-default btn-file " class="recordbutton" style="padding:15px;margin:15px;">
+                                      Download all as a GIF <input onchange="this.form.submit()" type="file" style="display: none;">
+                                </label>
+                                 
+
+	               
+					<div class="row" style="">
+						<!-- bir tek post -->
+						<article class="col-md-3 col-sm-6 col-xs-12 clearfix wow  " data-wow-duration="250ms">
+							<div class="note">
+								<div class="media-wrapper">
+									<img src="img/slides/f1.png" alt="Fidelio" class="img-responsive">
+								</div>
+								
+								<div class="excerpt">
+									<h3>Memoria</h3>
+									<a class="btn btn-transparent" href="#">Download</a>
+								</div>
+							</div>						
+						</article>
+						<!-- /bir tek post-->
+                        		<!-- bir tek post -->
+						<article class="col-md-3 col-sm-6 col-xs-12 clearfix wow  " data-wow-duration="250ms">
+							<div class="note">
+								<div class="media-wrapper">
+									<img src="img/slides/f1.png" alt="Fidelio" class="img-responsive">
+								</div>
+								
+								<div class="excerpt">
+									<h3>Oblivious</h3>
+									<a class="btn btn-transparent" href="#">Download</a>
+								</div>
+							</div>						
+						</article>
+						<!-- /bir tek post-->
+		<!-- bir tek post -->
+						<article class="col-md-3 col-sm-6 col-xs-12 clearfix wow  " data-wow-duration="250ms">
+							<div class="note">
+								<div class="media-wrapper">
+									<img src="img/slides/f1.png" alt="Fidelio" class="img-responsive">
+								</div>
+								
+								<div class="excerpt">
+									<h3>Lucifer</h3>
+									<a class="btn btn-transparent" href="#">Download</a>
+								</div>
+							</div>						
+						</article>
+						<!-- /bir tek post-->
+		<!-- bir tek post -->
+						<article class="col-md-3 col-sm-6 col-xs-12 clearfix wow  " data-wow-duration="250ms">
+							<div class="note">
+								<div class="media-wrapper">
+									<img src="img/slides/f1.png" alt="Fidelio" class="img-responsive">
+								</div>
+								
+								<div class="excerpt">
+									<h3>LSD</h3>
+									<a class="btn btn-transparent" href="#">Download</a>
+								</div>
+							</div>						
+						</article>
+						<!-- /bir tek post-->
+
+
+						
+						
+						<!-- bir tek post -->
+						<article class="col-md-3 col-sm-6 col-xs-12 wow  " data-wow-duration="250ms" data-wow-delay="400ms">
+							<div class="note">
+								<div class="media-wrapper">
+									<img src="img/slides/f1.png" alt="Fidelio" class="img-responsive">
+								</div>
+								
+								<div class="excerpt">
+									<h3>Amare</h3>
+									<a class="btn btn-transparent" href="#">Download</a>
+								</div>
+							</div>						
+						</article>
+						<!-- bir tek post bitti-->
+						
+						<!-- bir tek post -->
+						<article class="col-md-3 col-sm-6 col-xs-12 wow  " data-wow-duration="250ms" data-wow-delay="600ms">
+							<div class="note kill-margin-bottom">
+								<div class="media-wrapper">
+									<img src="img/slides/f1.png" alt="Fidelio" class="img-responsive">
+								</div>
+								<div class="excerpt">
+									<h3>Mortem</h3>
+									<a class="btn btn-transparent" href="#">Download</a>
+								</div>
+							</div>						
+						</article>
+						<!-- bir tek post bitti-->
+                        
+                        	<!-- bir tek post -->
+						<article class="col-md-3 col-sm-6 col-xs-12 wow  functionbg" data-wow-duration="250ms" data-wow-delay="600ms">
+							<div class="note kill-margin-bottom">
+								<div class="media-wrapper">
+									<img src="img/slides/f1.png"alt="Fidelio" class="img-responsive">
+								</div>
+								<div class="excerpt">
+									<h3>Capio</h3>
+									<a class="btn btn-transparent" href="#">Download</a>
+								</div>
+							</div>						
+						</article>
+						<!-- bir tek post bitti-->
+                        	<!-- bir tek post -->
+						<article class="col-md-3 col-sm-6 col-xs-12 wow  functionbg" data-wow-duration="250ms" data-wow-delay="600ms">
+							<div class="note kill-margin-bottom">
+								<div class="media-wrapper">
+									<img src="img/slides/f1.png"alt="Fidelio" class="img-responsive">
+								</div>
+								<div class="excerpt">
+									<h3>Pace</h3>
+									<a class="btn btn-transparent" href="#">Download</a>
+								</div>
+							</div>						
+						</article>
+						<!-- bir tek post bitti-->
+                        	<!-- bir tek post -->
+						<article class="col-md-3 col-sm-6 col-xs-12 wow  functionbg" data-wow-duration="250ms" data-wow-delay="600ms">
+							<div class="note kill-margin-bottom">
+								<div class="media-wrapper">
+									<img src="img/slides/f1.png"alt="Fidelio" class="img-responsive">
+								</div>
+								<div class="excerpt">
+									<h3>Dare</h3>
+									<a class="btn btn-transparent" href="#">Download</a>
+								</div>
+							</div>						
+						</article>
+						<!-- bir tek post bitti-->
+                        	<!-- bir tek post -->
+						<article class="col-md-3 col-sm-6 col-xs-12 wow  functionbg" data-wow-duration="250ms" data-wow-delay="600ms">
+							<div class="note kill-margin-bottom">
+								<div class="media-wrapper">
+									<img src="img/slides/f1.png"alt="Fidelio" class="img-responsive">
+								</div>
+								<div class="excerpt">
+									<h3>Mare</h3>
+									<a class="btn btn-transparent" href="#">Download</a>
+								</div>
+							</div>						
+						</article>
+						<!-- bir tek post bitti-->
+					</div>
+                                
+                                </div>
+                                </div> <!-- -->        
+		</section> <!-- Section Bitiş -->
+	
+		
+		<footer id="footer" class="bg-one">
+			<div class="container">
+			    <div class="row wow  " data-wow-duration="250ms">
+					<div class="col-lg-12">
+						
+				
+						<!--/. End Footer -->
+
+						<!-- copyright -->
+						<div class="copyright text-center">
+							<a href="index.html">
+								<img src="img/logo.png" alt="Fidelio" /> 
+							</a>
+							<br />
+							
+							<p>Fidelio,<a href="http://www..com.tr"> powered by </a>.  &copy; 2016.All rights reversed.</p>
+						</div>
+						<!-- /copyright -->
+						
+					</div> <!-- end col lg 12 -->
+				</div> <!-- Row Bitiş-->
+			</div> <!-- Container Bitiş -->
+		</footer> <!-- end footer -->
+		
+		<!-- Başa geri dön butonu sağda
+		============================== -->
+		<a href="javascript:;" id="scrollUp">
+			<i class="fa fa-angle-up fa-2x"></i>
+		</a>
+		
+		<!-- end Footer Area
+		========================================== -->
+		
+		<!-- 
+		Scriptler
+		=====================================-->
+		
+		<!-- Main jQuery -->
+		<script src="scriptler/jquery-1.11.0.min.js"></script>
+		<!-- Bootstrap 3.1 -->
+		<script src="scriptler/bootstrap.min.js"></script>
+		<!-- Slitslider -->
+		<script src="scriptler/jquery.slitslider.js"></script>
+        <!-- IF-THEN-ELSE --->
+		<script src="scriptler/jquery.ba-cond.min.js"></script>
+		<!-- Portfolio Filtering -->
+		<script src="scriptler/jquery.mixitup.min.js"></script>
+		<!-- Custom Scrollbar -->
+		<script src="scriptler/jquery.nicescroll.min.js"></script>
+        		<!-- navbar Search -->
+		<script src="scriptler/navbarSearch.js"></script>
+        <!-- Owl-Carousel -->
+		<script src="scriptler/owl.carousel.min.js"></script>
+		<script src="scriptler/jquery.parallax-1.1.3.js"></script>
+
+		<!-- Highlight menu item -->
+		<script src="scriptler/jquery.nav.js"></script>
+		<!-- Sticky Nav -->
+		<script src="scriptler/jquery.sticky.js"></script>
+
+		<!-- wow.min Script -->
+		<script src="scriptler/wow.min.js"></script>
+		<!-- For video responsive -->
+		<script src="scriptler/jquery.fitvids.js"></script>
+		<!-- Grid js -->
+		<script src="scriptler/grid.js"></script> <!-- süsleme
+		<!-- Koleksiyon yaptım js -->
+		<script src="scriptler/custom.js"></script> <!-- 
+    </body>
+</html>

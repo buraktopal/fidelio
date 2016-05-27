@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="Fidelio">
+        
+        <meta name="author" content="Fidelio | Visualizing your records">
+		
+        <title>Fidelio | Upload Your Sound</title>
+		
+		<!-- Mobile Specific Meta
+		================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png" />
+		
+		<!-- CSS
+		================================================== -->
+		<!-- Fontawesome Icon font -->
+        <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+        	<!-- Fontawesome Icon font -->
+        <link rel="stylesheet" href="/assets/css/font-awesome.css">
+		<!-- bootstrap.min css -->
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+		<!-- Animate.css -->
+        <link rel="stylesheet" href="/assets/css/animate.css">
+		<!-- Grid Component css -->
+        <link rel="stylesheet" href="/assets/css/component.css">
+		<!-- Slit Slider css -->
+        <link rel="stylesheet" href="/assets/css/slit-slider.css">
+		<!-- Main Stylesheet -->
+        <link rel="stylesheet" href="/assets/css/main.css">
+		<!-- Media Queries -->
+        <link rel="stylesheet" href="/assets/css/media-queries.css">
+        <!-- Search Box Bootstrap -->
+        <link rel="stylesheet" href="/assets/css/sBox.css">
+          <!-- Record Background Styles -->
+        <link rel="stylesheet" href="/assets/css/record.css">
+          <!-- Record Thumbnails Slider-->
+        <link rel="stylesheet" href="/assets/css/owl.carousel.css">
+              <!-- Home Random Image-->
+        <style>
+        #home .bg-img-1 {
+	           background-image: url(/assets/img/slides/yolo.gif);
+        }
+         .bg-img-1 {
+	           background-image: url(/{{ sound.gif }});
+        }    
+        </style>
+        
+		<!--
+		Google Font
+		=========================== -->                    
+		
+		<!-- Oswald / Title Font -->
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+		<!-- Ubuntu / Body Font -->
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300' rel='stylesheet' type='text/css'>
+		
+		<!-- Modernizer Script for old Browsers -->		
+        <script src="/assets/scriptler/modernizr-2.6.2.min.js"></script>
+
+
+	
+    </head>
+	
+    <body id="body">
+	    <!--
+	    Yüklenme Ekranı Başlangıç
+	    ==================================== -->
+		<div id="loading-mask">
+			<div class="loading-img">
+				<img alt="eNdaPreLoadeR" src="/assets/img/preloader.gif" width = "125" height="125" />
+			</div>
+		</div>
+        <!--
+        Yükleme Ekranı Bitiş
+        ==================================== -->
+
+
+		  <!-- 
+        Mobil Görünüm Üst Menü Navigasyon
+        ==================================== -->
+        {% include 'navbar.html' %}
+        <!--
+        Mobil Görünüm Üst Nav-bar Bitiş
+        ==================================== -->
+		<section id=" home" class="">
+			<div class="bg-img bg-img-1 og-grid">
+                <div class="record">
+
+                    <div class="col-lg-4">
+                    <!--Açıklama Adı  büyük yer-->
+                    <h2 data-wow-duration="300ms"  data-wow-delay="300ms" class="heading animated fadeInRight float-left ">File Name: </h2>
+                    <h3 style="font-weight:lighter;font-style:italic;">{{ sound.file_name }}</h3> <!-- Açıklama açıklaması küççük yer -->
+
+
+
+                    </div> <!-- COL-LG-2 BİTİŞ -->
+                        <div class="col-lg-4">
+                    <!--Açıklama Adı  büyük yer-->
+                    <h2 data-wow-duration="300ms"  data-wow-delay="300ms" class="heading animated fadeInRight float-left ">Sample Rate: </h2>
+                    <h3 style="font-weight:lighter;font-style:italic;">{{ sound.samplerate }}</h3> <!-- Açıklama açıklaması küççük yer -->
+                             <!--Açıklama Adı  büyük yer-->
+
+
+
+                    </div> <!-- COL-LG-2 BİTİŞ -->
+                        <div class="col-lg-4">
+                    <!--Açıklama Adı  büyük yer-->
+                    <h2 data-wow-duration="300ms"  data-wow-delay="300ms" class="heading animated fadeInRight float-left ">MD5: </h2>
+                    <h3 style="font-weight:lighter;font-style:italic;">{{ sound.md5 }} (Who Cares?)</h3> <!-- Açıklama açıklaması küççük yer -->
+                             <!--Açıklama Adı  büyük yer-->
+                    </div> <!-- COL-LG-2 BİTİŞ -->
+                                <!-- Resim olarak indir.. -->
+                <a href="/{{ sound.gif }}" download="gif">
+                    <label class="btn btn-default btn-file recordbutton" style="padding:15px;margin:15px;">
+                          Download all as a GIF
+                    </label>
+                </a>
+
+	               
+					<div class="row" style="">
+						<!-- bir tek post -->
+                        {% for image in sound.images.all %}
+						<article class="col-md-3 col-sm-6 col-xs-12 clearfix wow  " data-wow-duration="250ms">
+							<div class="note">
+								<div class="media-wrapper">
+									<img src="{{ image.file_path }}" alt="Fidelio" class="img-responsive">
+								</div>
+
+								<div class="excerpt">
+                                    {% if forloop.counter == 1 %}
+									    <h3>Candy</h3>
+                                    {% elif forloop.counter == 2 %}
+                                        <h3>Rainbow</h3>
+                                    {% elif forloop.counter == 3 %}
+                                        <h3>Aurora</h3>
+                                    {% elif forloop.counter == 4 %}
+                                        <h3>Glitch</h3>
+                                    {% elif forloop.counter == 5 %}
+                                        <h3>Memoria</h3>
+                                    {% elif forloop.counter == 6 %}
+                                        <h3>Mare</h3>
+                                    {% elif forloop.counter == 7 %}
+                                        <h3>Sour</h3>
+                                    {% endif %}
+									<a class="btn btn-transparent" href="{{ image.file_path }}" download="file">Download</a>
+								</div>
+							</div>						
+						</article>
+                        {% endfor %}
+						<!-- /bir tek post-->
+                        		<!-- bir tek post -->
+
+						<!-- bir tek post bitti-->
+					</div>
+                                
+                                </div>
+                                </div> <!-- -->        
+		</section> <!-- Section Bitiş -->
+	
+		
+		{% include 'footer.html' %}
+		<!-- end Footer Area
+		========================================== -->
+		
+		<!-- 
+		Scriptler
+		=====================================-->
+		
+		<!-- Main jQuery -->
+		<script src="/assets/scriptler/jquery-1.11.0.min.js"></script>
+		<!-- Bootstrap 3.1 -->
+		<script src="/assets/scriptler/bootstrap.min.js"></script>
+		<!-- Slitslider -->
+		<script src="/assets/scriptler/jquery.slitslider.js"></script>
+        <!-- IF-THEN-ELSE --->
+		<script src="/assets/scriptler/jquery.ba-cond.min.js"></script>
+		<!-- Portfolio Filtering -->
+		<script src="/assets/scriptler/jquery.mixitup.min.js"></script>
+		<!-- Custom Scrollbar -->
+		<script src="/assets/scriptler/jquery.nicescroll.min.js"></script>
+        		<!-- navbar Search -->
+		<script src="/assets/scriptler/navbarSearch.js"></script>
+        <!-- Owl-Carousel -->
+		<script src="/assets/scriptler/owl.carousel.min.js"></script>
+		<script src="/assets/scriptler/jquery.parallax-1.1.3.js"></script>
+
+		<!-- Highlight menu item -->
+		<script src="/assets/scriptler/jquery.nav.js"></script>
+		<!-- Sticky Nav -->
+		<script src="/assets/scriptler/jquery.sticky.js"></script>
+
+		<!-- wow.min Script -->
+		<script src="/assets/scriptler/wow.min.js"></script>
+		<!-- For video responsive -->
+		<script src="/assets/scriptler/jquery.fitvids.js"></script>
+		<!-- Grid js -->
+		<script src="/assets/scriptler/grid.js"></script> <!-- süsleme
+		<!-- Koleksiyon yaptım js -->
+		<script src="/assets/scriptler/custom.js"></script> <!--
+    </body>
+</html>

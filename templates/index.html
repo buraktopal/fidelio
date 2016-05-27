@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="Fidelio">
+        
+        <meta name="author" content="Fidelio | Visualizing your records">
+		
+        <title>Fidelio | Upload Your Sound</title>
+		
+		<!-- Mobile Specific Meta
+		================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png" />
+		
+		<!-- CSS
+		================================================== -->
+		<!-- Fontawesome Icon font -->
+        <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+        	<!-- Fontawesome Icon font -->
+        <link rel="stylesheet" href="/assets/css/font-awesome.css">
+		<!-- bootstrap.min css -->
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+		<!-- Animate.css -->
+        <link rel="stylesheet" href="/assets/css/animate.css">
+		<!-- Grid Component css -->
+        <link rel="stylesheet" href="/assets/css/component.css">
+		<!-- Slit Slider css -->
+        <link rel="stylesheet" href="/assets/css/slit-slider.css">
+		<!-- Main Stylesheet -->
+        <link rel="stylesheet" href="/assets/css/main.css">
+		<!-- Media Queries -->
+        <link rel="stylesheet" href="/assets/css/media-queries.css">
+        <!-- Search Box Bootstrap -->
+        <link rel="stylesheet" href="/assets/css/sBox.css">
+         <!-- Upload Screen With Full Screen -->
+        <link rel="stylesheet" href="/assets/css/uploadscreen.css">
+              <!-- Home Random Image-->
+        <style>
+        #home .bg-img-1 {
+	           background-image: url(/{{ background }});
+        }
+            
+        </style>
+        
+		<!--
+		Google Font
+		=========================== -->                    
+		
+		<!-- Oswald / Title Font -->
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+		<!-- Ubuntu / Body Font -->
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300' rel='stylesheet' type='text/css'>
+		
+		<!-- Modernizer Script for old Browsers -->		
+        <script src="/assets/scriptler/modernizr-2.6.2.min.js"></script>
+
+
+	
+    </head>
+	
+    <body id="body">
+	    <!--
+	    Yüklenme Ekranı Başlangıç
+	    ==================================== -->
+		<div id="loading-mask">
+			<div class="loading-img">
+				<img alt="preloader" src="/assets/img/preloader.gif" width = "125" height="125" />
+			</div>
+		</div>
+        <!--
+        Yükleme Ekranı Bitiş
+        ==================================== -->
+		  <!-- 
+        Mobil Görünüm Üst Menü Navigasyon
+        ==================================== -->
+        {% include 'navbar.html' %}
+        <!--
+        Mobil Görünüm Üst Nav-bar Bitiş
+        ==================================== -->
+        <!--
+        content başla
+        ==================================== -->
+		<section id="home">	    
+		
+            <div id="slitSlider" class="sl-slider-wrapper">
+                <button class="btn btn-default" href="">Go to<br />Background<br /><span class="orange-circle-greater-than">></span></button>
+				<div class="sl-slider">
+					
+					<!-- slider'ın tekinin başlangıcı -->
+					<div class="sl-slide">
+                        
+						<div class="sl-slide-inner">
+							<div id="bg666" class="bg-img bg-img-1 og-grid"></div>
+						<div class="carousel-caption">
+							<div>
+								
+								<h2 id="caption1" data-wow-duration="300ms"  data-wow-delay="300ms" class="heading animated fadeInRight">Upload your favorite records</h2>
+                                <h2 style="display:none;" id="captionUpload" data-wow-duration="300ms"  data-wow-delay="300ms" class="heading animated fadeInRight">Uploading please wait...</h2>
+                                <label id="caption2" class="btn btn-default btn-file">Upload a file
+                                    <form id="upload-tho" method="POST" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                            <input id="uploadInput" name="files"  value="loading-tho" onchange="this.form.submit();" type="file" style="display: none;">
+                                            <input name="index_upload" style="background-color: transparent;display: none;"  type="submit">
+                                    </form>
+                                </label>
+                                 
+							</div>
+
+						</div>
+                            
+						</div>
+                              
+	
+	
+       
+					</div>
+					<!-- /slider'ın teki sonu -->
+				
+                    
+                    
+				</div><!-- /sl-slider BİTİŞ  -->
+				
+			
+
+				<nav  class="nav-dots">
+                    
+					<span class="nav-dot-current"></span>
+					<span></span>
+					<span></span>
+                    
+				</nav>
+
+			</div><!-- /slider-wrapper bitiş-->
+		</section>
+		<!--/#Anasayfa Tab'ı-->
+		
+      
+	
+		
+		{% include 'footer.html' %}
+		
+		<!-- end Footer Area
+		========================================== -->
+		
+		<!-- 
+		Scriptler
+		=====================================-->
+		
+		<!-- Main jQuery -->
+		<script src="/assets/scriptler/jquery-1.11.0.min.js"></script>
+		<!-- Bootstrap 3.1 -->
+		<script src="/assets/scriptler/bootstrap.min.js"></script>
+		<!-- Slitslider -->
+		<script src="/assets/scriptler/jquery.slitslider.js"></script>
+        <!-- IF-THEN-ELSE --->
+		<script src="/assets/scriptler/jquery.ba-cond.min.js"></script>
+		<!-- Portfolio Filtering -->
+		<script src="/assets/scriptler/jquery.mixitup.min.js"></script>
+		<!-- Custom Scrollbar -->
+		<script src="/assets/scriptler/jquery.nicescroll.min.js"></script>
+        		<!-- navbar Search -->
+		<script src="/assets/scriptler/navbarSearch.js"></script>
+
+
+        <script type="application/javascript">
+
+
+        </script>
+
+
+        <script type="application/javascript">
+            
+        var form = document.getElementById('upload-tho');
+        form.onchange = function(e)
+        {
+        formHandler();
+        };
+
+        var formHandler = function()
+        {
+        $('#bg666').css("background-image", "url(/assets/img/upload.gif)");
+        $('#caption1').css("display","none");
+        $('#caption2').css("display","none");
+        $('#caption3').css("display","none");
+        $('#captionUpload').css("display","inline-grid");
+
+
+        };
+        
+        
+        
+        
+        
+        </script>
+        <script type="application/javascript">
+            
+        var form = document.getElementById('uploadNavBar');
+
+        form.onsubmit = function(e)
+        {
+        formHandler();
+        return false;
+        };
+
+        var formHandler = form.submit = function()
+        {
+        $('#bg666').css("background-image", "url(/assets/img/upload.gif)");
+        $('#caption1').css("display","none");
+        $('#caption2').css("display","none");
+        $('#caption3').css("display","none");
+        $('#captionUpload').css("display","inline-grid");
+
+
+        };
+        
+        
+        
+        
+        
+        </script>
+		<!-- Highlight menu item -->
+		<script src="/assets/scriptler/jquery.nav.js"></script>
+		<!-- Sticky Nav -->
+		<script src="/assets/scriptler/jquery.sticky.js"></script>
+
+		<!-- wow.min Script -->
+		<script src="/assets/scriptler/wow.min.js"></script>
+		<!-- For video responsive -->
+		<script src="/assets/scriptler/jquery.fitvids.js"></script>
+		<!-- Grid js -->
+		<script src="/assets/scriptler/grid.js"></script> <!-- süsleme
+		<!-- Koleksiyon yaptım js -->
+		<script src="/assets/scriptler/custom.js"></script> <!--
+    </body>
+</html>

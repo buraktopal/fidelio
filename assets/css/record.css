@@ -1,0 +1,33 @@
+
+/*  */
+
+.record{
+	background-color: rgba(53,53,53,0.5);
+	width : 100%;
+	display: table;
+	border: 10px solid #fff;
+	height: 100%;
+
+}
+.recordbutton{
+	padding: 15px;
+	margin: 15px;
+
+}
+.record h2{
+	font-size: 36px !important;
+
+}
+.record h3{
+	font-size: 30px  !important;
+}
+.recordthumbnails{
+	width: 15% !important;
+	margin: 15px !important;
+}
+.functionbg{
+	background-color: transparent !important;
+}
+.recordthumbnails h4{
+	color: #fff;
+}
