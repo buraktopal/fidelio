@@ -77,6 +77,5 @@ def create_md5(fname):
 
 def created(request, md5):
     sound = Sound.objects.get(md5__exact=md5)
-    return render_to_response('created.html',
-                              {'sound': sound},
-                              context_instance=RequestContext(request))
+    return render(request, 'created.html',
+                              {'sound': sound})
