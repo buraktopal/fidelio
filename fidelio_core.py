@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 This file has written by Burak Topal and Melih Tolga Şahin.
 Theese codes are mainframe of "fidelio project".

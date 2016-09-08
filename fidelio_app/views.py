@@ -3,8 +3,7 @@ import time
 from fidelio import settings
 from fidelio_core import *
 
-from django.shortcuts import render_to_response, redirect
-from django.template import RequestContext
+from django.shortcuts import render, redirect
 
 from fidelio_app.models import *
 
@@ -46,14 +45,11 @@ def index(request):
     background = Sound.objects.order_by('?').first()
 
     if background is None:
-
-        return render_to_response('index.html',
-                                  {'background': 'assets/img/slides/yolo.gif'},
-                                  context_instance=RequestContext(request))
+        return render(request, 'index.html',
+                                  {'background': 'assets/img/slides/yolo.gif'})
     else:
-        return render_to_response('index.html',
-                                  {'background': background.gif},
-                                  context_instance=RequestContext(request))
+        return render(request, 'index.html',
+                                  {'background': background.gif})
 
 
 def handle_uploaded_file(f, filename):
